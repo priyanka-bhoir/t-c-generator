@@ -25,8 +25,10 @@ app.get('/page1',function(req,res) {
 	// res.end(JSON.stringify(req.query));
 	// res.end(response);
 });
-app.get('/page2',function(req,res) {
-	res.sendFile('/files/page2.html',{root:__dirname});
+app.post('/page2',function(req,res) {
+	res.send(`Full name is:${req.body.website}`,req.params);
+	// res.end(JSON.stringify(req.body));
+	// res.sendFile('/files/page2.html',{root:__dirname});
 
 	// var response ="hello!"+req.query.firstName;
 	// res.end(JSON.stringify(req.query));
